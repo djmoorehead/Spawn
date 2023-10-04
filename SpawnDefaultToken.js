@@ -378,15 +378,6 @@ const SpawnDefaultToken = (() => {
             ////////////////////////////////////////////////////////////
             spawnObj = createObj('graphic',baseObj);
             
-            //Temp fix for UDL not respecting vision properties at object creation.
-            spawnObj.set({
-                has_bright_light_vision: true,
-                has_night_vision: true,
-                night_vision_distance: 60,
-                night_vision_effect: 'Nocturnal',
-                
-            });
-            
             let pageData = getObj('page', Campaign().get("playerpageid"));
             pageData.set('force_lighting_refresh', true);
             
